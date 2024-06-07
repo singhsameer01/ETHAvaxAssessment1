@@ -1,4 +1,4 @@
-//SPDX-License-Identifier:MIT
+//SPDX-License-Identifier:Unlicensed
 pragma solidity 0.8.26;
 
 contract errorHandling{
@@ -22,7 +22,7 @@ contract errorHandling{
     function testRevert(uint value)public {
         value*=10**18;
         user.transfer(value);
-        if(accBalance>value){
+        if(accBalance<value){
             revert("Not sufficient balance in account.");
         }
     }
